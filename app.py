@@ -81,6 +81,7 @@ def index():
 @app.route('/lavanguardia/<seccio>')
 def lavanguardia(seccio):
     rss = get_rss_lavanguardia(seccio)
+    print (rss.entries[0])
     return render_template("lavanguardia.html", rss = rss)
 
 def get_rss_lavanguardia(seccio):
