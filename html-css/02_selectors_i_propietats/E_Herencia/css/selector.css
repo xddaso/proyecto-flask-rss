@@ -1,0 +1,17 @@
+/*
+Herència
+*/
+p {
+	color:blue;
+	font-size:12pt;
+	text-decoration:underline;
+}
+
+/*
+Si l'etiqueta <em> es dins de l'etiqueta <p> el contingut de <em> HEREDA tot l’estil de
+<p>, i a més, tindra el seu propi.
+*/
+p em{
+	font-size:20pt;
+}
+

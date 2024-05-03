@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="horari.xsl"?>
+<horari header="https://i.ibb.co/ykHW3gB/school.jpg">
+    <colors>
+        <!-- Pista: genera classes CSS que es diguin M01, M02, etc... -->
+        <color codi="M01">#ff9999</color>
+        <color codi="M02">#99ff99</color>
+        <color codi="M03">#9999ff</color>
+        <color codi="M04">#ffff99</color>
+        <color codi="M08">#cc99ff</color>
+        <color codi="M09">#ff99ff</color>
+        <color codi="M10">#ffcc99</color>
+        <color codi="M11">#99ffff</color>
+    </colors>
+    <links nom="Enllaços directes">
+        <!-- Pista: els hauràs d'ordenar pq a la imatge es veuen en un ordre diferent! -->
+        <link>
+            <nom>Moodle</nom>
+            <url>https://moodle.insjoaquimmir.cat/</url>
+        </link>
+        <link>
+            <nom>Institut Joaquim Mir</nom>
+            <url>https://agora.xtec.cat/iesjoaquimmir/</url>
+        </link>
+         <link>
+            <nom>Departament d'Educació</nom>
+            <url>https://educacio.gencat.cat/ca/inici</url>
+        </link>
+        <link>
+            <nom>IsardVDI</nom>
+            <url>https://pilotfp.gencat.isardvdi.com/login/joaquimmir</url>
+        </link>
+        <link>
+            <nom>IEduca</nom>
+            <url>https://joaquimmir.ieduca.com</url>
+        </link>
+    </links>
+    <setmana>
+        <!-- L'horari el pots fer amb <table> o fent servir flex -->
+        <dia nom="Dilluns">
+            <modul>
+                <codi>M01</codi>
+                <nom>Sistemes Operatius</nom>
+            </modul>
+            <modul>
+                <codi>M02</codi>
+                <nom>Bases de Dades</nom>
+            </modul>
+            <modul>
+                <codi>M03</codi>
+                <nom>Programació</nom>
+            </modul>
+            <modul>
+                <codi>M04</codi>
+                <nom>Marques</nom>
+            </modul>
+            <modul>
+                <codi>M09</codi>
+                <nom>Implantació</nom>
+            </modul>
+            <modul>
+                <codi>M11</codi>
+                <nom>EIE</nom>
+            </modul>
+        </dia>
+        <dia nom="Dimarts">
+            <modul>
+                <codi>M01</codi>
+                <nom>Sistemes Operatius</nom>
+            </modul>
+            <modul>
+                <codi>M10</codi>
+                <nom>FOL</nom>
+            </modul>
+            <modul>
+                <codi>M08</codi>
+                <nom>Desplegament</nom>
+            </modul>
+            <modul>
+                <codi>M03</codi>
+                <nom>Programació</nom>
+            </modul>
+            <modul>
+                <codi>M11</codi>
+                <nom>EIE</nom>
+            </modul>
+            <modul>
+                <codi>M09</codi>
+                <nom>Implantació</nom>
+            </modul>
+        </dia>
+        <dia nom="Dimecres">
+            <modul>
+                <codi>M02</codi>
+                <nom>Bases de Dades</nom>
+            </modul>
+            <modul>
+                <codi>M10</codi>
+                <nom>FOL</nom>
+            </modul>
+            <modul>
+                <codi>M08</codi>
+                <nom>Desplegament</nom>
+            </modul>
+            <modul>
+                <codi>M04</codi>
+                <nom>Marques</nom>
+            </modul>
+            <modul>
+                <codi>M09</codi>
+                <nom>Implantació</nom>
+            </modul>
+            <modul>
+                <codi>M11</codi>
+                <nom>EIE</nom>
+            </modul>
+        </dia>
+        <dia nom="Dijous">
+            <modul>
+                <codi>M01</codi>
+                <nom>Sistemes Operatius</nom>
+            </modul>
+            <modul>
+                <codi>M02</codi>
+                <nom>Bases de Dades</nom>
+            </modul>
+            <modul>
+                <codi>M03</codi>
+                <nom>Programació</nom>
+            </modul>
+            <modul>
+                <codi>M10</codi>
+                <nom>FOL</nom>
+            </modul>
+            <modul>
+                <codi>M04</codi>
+                <nom>Marques</nom>
+            </modul>
+            <modul>
+                <codi>M11</codi>
+                <nom>EIE</nom>
+            </modul>
+        </dia>
+        <dia nom="Divendres">
+            <modul>
+                <codi>M01</codi>
+                <nom>Sistemes Operatius</nom>
+            </modul>
+            <modul>
+                <codi>M02</codi>
+                <nom>Bases de Dades</nom>
+            </modul>
+            <modul>
+                <codi>M10</codi>
+                <nom>FOL</nom>
+            </modul>
+            <modul>
+                <codi>M08</codi>
+                <nom>Desplegament</nom>
+            </modul>
+            <modul>
+                <codi>M04</codi>
+                <nom>Marques</nom>
+            </modul>
+            <modul>
+                <codi>M09</codi>
+                <nom>Implantació</nom>
+            </modul>
+        </dia>
+    </setmana>
+</horari>

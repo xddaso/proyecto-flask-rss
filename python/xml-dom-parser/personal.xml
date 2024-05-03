@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+
+<example>
+    <company>OpenAI</company>
+    <people>
+        <person id="P001">
+            <name gender="male">John</name>
+            <age>30</age>
+            <naixement>1985-11-24</naixement>
+        </person>
+
+        <person id="P002">
+            <name gender="female">Jane</name>
+            <age>21</age>
+            <naixement>2002-05-11</naixement>
+        </person>
+    </people>
+</example>

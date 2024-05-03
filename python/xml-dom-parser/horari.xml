@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<horari>
+    <alumne>
+        <nom>Marta López</nom>
+        <curs>4t d'ESO</curs>
+        <foto>https://i.ibb.co/bLfPv2Z/marta-lopez.jpg</foto>
+    </alumne>
+    <colors>
+        <assignatura color="#FF0000">Matemàtiques</assignatura>
+        <assignatura color="#00FF00">Ciències Naturals</assignatura>
+        <assignatura color="#0000FF">Ciències Socials</assignatura>
+        <assignatura color="#FFFF00">Llengua i Literatura</assignatura>
+        <assignatura color="#FFA500">Anglès</assignatura>
+        <assignatura color="#FF00FF">Música</assignatura>
+        <assignatura color="#800080">Tecnologia</assignatura>
+        <assignatura color="#00FFFF">Educació Física</assignatura>
+    </colors>
+    <franges>
+        <franja>08:00-08:55</franja>
+        <franja>09:00-09:55</franja>
+        <franja>10:00-10:55</franja>
+        <franja>11:30-12:25</franja>
+        <franja>12:30-13:25</franja>
+        <franja>13:30-14:25</franja>
+    </franges>
+    <classes>
+        <dia>
+            <nom>Dilluns</nom>
+            <assignatures>
+                <assignatura>Educació Física</assignatura>
+                <assignatura>Ciències Naturals</assignatura>
+                <assignatura>Llengua i Literatura</assignatura>
+                <assignatura>Anglès</assignatura>
+                <assignatura>Ciències Socials</assignatura>
+                <assignatura>Música</assignatura>
+            </assignatures>
+        </dia>
+        <dia>
+            <nom>Dimarts</nom>
+            <assignatures>
+                <assignatura>Ciències Naturals</assignatura>
+                <assignatura>Matemàtiques</assignatura>
+                <assignatura>Ciències Socials</assignatura>
+                <assignatura>Música</assignatura>
+                <assignatura>Anglès</assignatura>
+                <assignatura>Tecnologia</assignatura>
+            </assignatures>
+        </dia>
+        <dia>
+            <nom>Dimecres</nom>
+            <assignatures>
+                <assignatura>Llengua i Literatura</assignatura>
+                <assignatura>Tecnologia</assignatura>
+                <assignatura>Música</assignatura>
+                <assignatura>Anglès</assignatura>
+                <assignatura>Matemàtiques</assignatura>
+                <assignatura>Ciències Socials</assignatura>
+            </assignatures>
+        </dia>
+        <dia>
+            <nom>Dijous</nom>
+            <assignatures>
+                <assignatura>Anglès</assignatura>
+                <assignatura>Llengua i Literatura</assignatura>
+                <assignatura>Matemàtiques</assignatura>
+                <assignatura>Tecnologia</assignatura>
+                <assignatura>Educació Física</assignatura>
+                <assignatura>Ciències Socials</assignatura>
+            </assignatures>
+        </dia>
+        <dia>
+            <nom>Divendres</nom>
+            <assignatures>
+                <assignatura>Tecnologia</assignatura>
+                <assignatura>Música</assignatura>
+                <assignatura>Matemàtiques</assignatura>
+                <assignatura>Ciències Naturals</assignatura>
+                <assignatura>Anglès</assignatura>
+                <assignatura>Ciències Socials</assignatura>
+            </assignatures>
+        </dia>
+    </classes>
+</horari>

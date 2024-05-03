@@ -1,0 +1,17 @@
+/*
+Selectors de classe (class = “ “)  Tot aquell que vulgui decorar-se així, que diga que pertany a aquesta classe
+*/
+/*
+Aquest s'aplica a totes les etiquetes p que siguin de la classe 'classeblava'
+*/
+p.classeblava{
+	color:blue;
+}
+/*
+Aquest s'aplica a qualsevol etiqueta que sigui de la classe 'classeverda'
+*/
+.classeverda {
+	color:green;
+}
+
+

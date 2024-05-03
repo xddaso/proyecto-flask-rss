@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<diaris>
+    <diari id="1">
+        <nom>El País</nom>
+        <url>https://elpais.com</url>
+    </diari>
+    <diari id="2">
+        <nom>The New York Times</nom>
+        <url>https://www.nytimes.com</url>
+    </diari>
+    <diari id="3">
+        <nom>Le Monde</nom>
+        <url>https://www.lemonde.fr</url>
+    </diari>
+</diaris>

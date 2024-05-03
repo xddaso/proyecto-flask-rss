@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="stock.xsl"?>
+<shop>
+	<name>Mango</name>
+	<address>Pg. de Gràcia, 36, Barcelona</address>
+	<url>https://shop.mango.com/es</url>
+	<stock>
+		<category name="Clothing">
+			<product>
+				<id>1</id>
+				<name>T-Shirt</name>
+				<brand>Brand A</brand>
+				<quantity>100</quantity>
+				<price>20.00</price>
+			</product>
+			<product>
+				<id>2</id>
+				<name>Jeans</name>
+				<brand>Brand B</brand>
+				<quantity>50</quantity>
+				<price>35.00</price>
+			</product>
+			<product>
+				<id>3</id>
+				<name>Hoodie</name>
+				<brand>Brand C</brand>
+				<quantity>75</quantity>
+				<price>45.00</price>
+			</product>
+		</category>
+		<category name="Accessories">
+			<product>
+				<id>4</id>
+				<name>Socks</name>
+				<brand>Brand D</brand>
+				<category>Accessories</category>
+				<quantity>200</quantity>
+				<price>5.00</price>
+			</product>
+		</category>
+	</stock>	
+</shop>

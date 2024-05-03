@@ -1,0 +1,25 @@
+p {
+    padding: 5px;
+    border: 2px dotted blueviolet;
+}
+
+div {
+    padding: 5px;
+    border: 2px dashed red;
+}
+
+div#font-petita {
+    font-size: 10px;
+}
+
+.exemple-em {
+    font-size: 2em;
+}
+
+.exemple-rem {
+    font-size: 2rem;
+}
+
+.exemple-percentage {
+    font-size: 200%;
+}

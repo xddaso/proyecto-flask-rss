@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="dibuix.xsl"?>
+<dibuix>
+    <canvas>
+        <amplada>400</amplada>
+        <alçada>400</alçada>
+    </canvas>
+    <figures>
+        <figura tipus="rectangle" color="red">
+            <posicio>
+                <x>100</x>
+                <y>20</y>
+            </posicio>
+            <dimensions>
+                <amplada>100</amplada>
+                <alçada>100</alçada>
+            </dimensions>
+        </figura>
+    </figures>
+</dibuix>

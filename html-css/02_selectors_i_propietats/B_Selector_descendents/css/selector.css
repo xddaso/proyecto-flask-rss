@@ -1,0 +1,24 @@
+/*
+Selectors descendents
+*/
+
+/*
+Solament s’aplicarà el fons groc als elements
+  <em>, que es troben dins d’un paràgraf <p>.
+*/
+p em {
+	background-color:yellow; 
+}
+
+li {
+	color: green;
+}
+/*
+Aquest estil definit solament s’aplicarà als
+hipervincles <a> que es troben situats dins d’un
+element de llista <li>.
+*/
+li a{
+	text-decoration:none;
+}
+

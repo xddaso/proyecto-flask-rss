@@ -1,0 +1,26 @@
+/*
+Selectors tipus o selectors d’elements. Apliquem els estils directament a una etiqueta HTML (p, a, h1...h6, li, tr, etc.)
+*/
+body {
+	background-color:pink;
+}
+p{
+	background-color:yellow;
+	color:red;
+	font-size:36pt;
+}
+/* 
+Aquest s'aplica tant a l'etiqueta h1 com a l'etiqueta h2
+*/
+h1, h2{
+	text-decoration:underline;
+	text-align:right;
+}
+li{
+	color:green;
+}
+i{
+	background-color:blue;
+	font-size:14pt;
+}
+

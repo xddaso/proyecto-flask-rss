@@ -1,0 +1,30 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+div {
+    padding: 2px;
+    border: 1px solid red;
+}
+
+main {
+    min-height: 100vh;
+    background-color: lightsalmon;
+}
+
+.half-width {
+    width: 50vw;
+    background-color: lightblue;
+}
+
+.half-width p {
+    color: red;
+    background-color: white;
+    width: 50%;
+    min-width: 200px;
+}
+
+.half-heigh {
+    height: 50vh;
+    background-color: lemonchiffon;
+}

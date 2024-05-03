@@ -1,0 +1,19 @@
+body,
+html {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: lightpink;
+}
+
+.flex-container {
+    display: flex;
+    justify-content: flex-start; 
+    align-items: center;    
+    align-content: stretch;
+}
+
+.flex-container > div{
+    padding: 8px;
+}
