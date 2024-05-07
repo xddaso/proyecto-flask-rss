@@ -78,7 +78,16 @@ Ahora que tenemos el repositorio en GitHub procedemos a unificarlo con nuestro r
 
 3. Ahora desde la carpeta en local donde inicializamos el repositorio utilizamos el siguiente commando para enlazar ambos repos: 
 
+    ```bash
+    git remote add origin https://github.com/xddaso/proyecto-flask-rss.git
+    ```
+<br>
+
+En este punto ambos repositorios estan conectados, ahora falta subir el contendio del local al remoto mediante:
+
 ```bash
-git remote add origin https://github.com/xddaso/proyecto-flask-rss.git
+git pull origin main
 ```
 
+> [!WARNING]
+> Puede que la rama por defecto creada al iniciar 
