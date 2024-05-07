@@ -26,7 +26,7 @@ git init
 ```
 <br>
 
-Ahora procedemos a crear un repositorio en GitHub:
+### Creación de un repositorio en GitHub:
 
 <br>
 
@@ -58,13 +58,27 @@ En este caso ya había creado previamente el repositorio, este paso es solo para
 
 <br>
 
+### Unificaciónd de repositorios
+
+<br>
+
 Ahora que tenemos el repositorio en GitHub procedemos a unificarlo con nuestro repositorio local:
 
 <br>
 
-Previo a esto deberemos obtener nuestro enlace de clonación del repositorio, en este caso lo haré mediante el método HTTPS:
+1. Previo a esto deberemos obtener nuestro enlace de clonación del repositorio, en este caso lo haré mediante el método HTTPS:
 
+<br>
+
+2. Para obtenerlo nos dirigimos a nuestro repositorio en GitHub y en el apartado de código podremos obtener el enlace:
+
+    ![image](https://github.com/xddaso/proyecto-flask-rss/assets/104591247/c154db6a-b9d2-4f50-81d1-f4610253d6fa)
+
+<br>
+
+3. Ahora desde la carpeta en local donde inicializamos el repositorio utilizamos el siguiente commando para enlazar ambos repos: 
 
 ```bash
-
+git remote add origin https://github.com/xddaso/proyecto-flask-rss.git
 ```
+
