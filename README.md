@@ -26,3 +26,4 @@ a = 2 + 3
 També pots integrar-ho `a=2` al paràgraf.
 
 ---
+![image](https://github.com/xddaso/proyecto-flask-rss/assets/104591247/d483ba02-ff74-42e6-b75a-865f75cfb40f)
