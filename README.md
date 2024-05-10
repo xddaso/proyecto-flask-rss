@@ -95,4 +95,37 @@ git push origin main
 
 <br>
 
+## Entornos virtuales
 
+
+Para crear y configurar un un entorno virtual en este caso en Linux hay que seguir los siguientes pasos:  
+
+1. Para crear el entorno virtual, mediante terminal en la carpeta base del proyecto introducimos:
+   
+   ```bash
+   python3 -m venv .venv
+   ```
+2. Ahora que ya lo hemos creado, para activarlo introducimos:
+   
+   ```bash
+   source .venv/bin/activate
+   ```
+3. En este punto nos encontramos en el entorno virtual, ahora debemos instalar los paquetes que tenemos en el archivo requeriments.txt que obtuvimos del codigo base mediante:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+4. Si queremos salir del entorno virutal ejecutamos:
+
+   ```bash
+   deactivate
+   ```
+### Flask
+
+Para iniciar nuestra aplicación Flask dentro del entorno virtual deberemos ejecutar la siguiente linea:
+
+```bash
+flask run --debug
+```
+> [!IMPORTANT]
+> Al iniciar la aplicación de forma local, podremos acceder a ella a traves del navegador en el enlace `https:localhost`
