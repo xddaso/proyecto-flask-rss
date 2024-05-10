@@ -52,7 +52,7 @@ Ahora comenzamos con la configuración del repositorio:
 
 
 > [!NOTE] 
-> Ya que partimos de un código en local que posee un Readme.md no es necesario agregarlo en la creación del repositorio. Simplemente agregamos un nombre, descripción (opcional) y decidimos si será publico o privado, las demás opciones en principio no nos interesan, al menos por el momento.
+> Ya que partimos de un código en local que posee un README.md no es necesario agregarlo en la creación del repositorio. Simplemente agregamos un nombre, descripción (opcional) y decidimos si será publico o privado, las demás opciones en principio no nos interesan, al menos por el momento.
 
 En este caso ya había creado previamente el repositorio, este paso es solo para documentar el proceso de creación. 
 
