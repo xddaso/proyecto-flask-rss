@@ -99,6 +99,7 @@ git push origin main
 
 
 Para crear y configurar un un entorno virtual en este caso en Linux hay que seguir los siguientes pasos:  
+<br>
 
 1. Para crear el entorno virtual, mediante terminal en la carpeta base del proyecto introducimos:
    
@@ -120,6 +121,8 @@ Para crear y configurar un un entorno virtual en este caso en Linux hay que segu
    ```bash
    deactivate
    ```
+<br>
+
 ### Flask
 
 Para iniciar nuestra aplicación Flask dentro del entorno virtual deberemos ejecutar la siguiente linea:
