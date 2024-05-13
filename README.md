@@ -167,12 +167,27 @@ En la página principal debemos agregar los enlaces a las secciones agregadas, p
 
 ## Detalle de las entradas
 
+Para cada item de las entradas se nos pide (descripció, dates de creació i de modificació, autor i categoria), para hacerlo debemos aplicar algunos cambios tanto en `app.py` como en `lavanguardia.html`:
 
-## app.py
+### `app.py`
 
+En este caso, debemos agregar una simple línea para mostrar los detalles que nos piden de cada seccion rss, ya que en si, las que se muestran en el archivo no son los nombres reales de cada valor de los items.
 
+En la ruta de las secciones debemos agregar:
 
-## `lavanguardia.html`
+`print (rss.entries[0])`
+
+Lo que quedaría de la siguiente manera en conjunto con el codigo previo:
+
+```python
+@app.route('/lavanguardia/<seccio>')
+def lavanguardia(seccio):
+    rss = get_rss_lavanguardia(seccio)
+    print (rss.entries[0])
+    return render_template("lavanguardia.html", rss = rss)
+```
+
+### `lavanguardia.html`
 
 Para crear una descripcion de cada entrada rss de
 Descripciones para cada entrada
