@@ -149,10 +149,30 @@ Si nos dirigimos al enlace, veríamos algo así con todas las secciones:
 
 Al seleccionar una, nos redirige a una pestaña con su codigo rss que se vería algo así:
 
-![image](https://github.com/xddaso/proyecto-flask-rss/assets/104591247/48afc301-a94f-4eb4-aea3-f00ff6e458a5)
+![image](https://github.com/xddaso/proyecto-flask-rss/assets/104591247/9a3c487d-18c1-4812-913b-2cbaf9a3776e)
 
 En mi caso añadí las secciones de Tecnología y Comer, una vez obtenido su código rss de la web lo incluimos en los archivos `.xml` creados anteriormente:
 
 ![image](https://github.com/xddaso/proyecto-flask-rss/assets/104591247/7c0ec68c-f209-4195-97f0-c97dd84ce738)
 
+<br>
 
+## `index.html`
+
+En la página principal debemos agregar los enlaces a las secciones agregadas, partiendo de los agregados en el codigo base, quedaría de la siguiente manera:
+
+![image](https://github.com/xddaso/proyecto-flask-rss/assets/104591247/af848f02-46fa-44da-8e0c-94695e4eb045)
+
+<br>
+
+## Detalle de las entradas
+
+
+## app.py
+
+
+
+## `lavanguardia.html`
+
+Para crear una descripcion de cada entrada rss de
+Descripciones para cada entrada
