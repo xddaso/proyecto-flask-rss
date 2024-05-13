@@ -237,3 +237,38 @@ Para crear una descripción de cada entrada rss una vez obtenidos los nombres de
     {% endfor %}
 </body>
 ```
+En este caso estamos creando un bucle para cada item que devuleve cada valor solicitado, y fuera del bucle obtenemos tmb los valores del titulo, el logo y el link de la noticia y de la secccion.
+
+### Modo remoto
+
+Mediante el modo remoto accedemos a los enlaces de la vanguardia por link y no por acceso local. Un ejemplo:
+
+En `app.py`:
+
+```python
+def get_rss_lavanguardia(seccio):
+    # MODE REMOT: versió on descarrega l'XML de la web
+    xml = f"https://www.lavanguardia.com/rss/{seccio}.xml"
+    
+    # MODE LOCAL: versió que fa servir l'XML descarregat
+    #xml = f"./rss/lavanguardia/{seccio}.xml"
+    
+    rss = feedparser.parse(xml)
+    return rss
+```
+En `index.html` debemos escribir los enlaces de la siguiente manera:
+
+```html
+<li><a href="https://www.lavanguardia.com/rss/comer.xml">Comer</a></li>
+```
+
+Resultado:
+
+![image](https://github.com/xddaso/proyecto-flask-rss/assets/104591247/944fe526-6661-46ea-b36c-1890dc934c25)
+
+### Modo local
+
+En ``
+
+> [!IMPORTANT]
+> Para usar el modo remoto debemos comentar el modo local y viceversa
