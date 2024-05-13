@@ -187,7 +187,42 @@ def lavanguardia(seccio):
     return render_template("lavanguardia.html", rss = rss)
 ```
 
+Mediante esta linea impirmiremos por terminal al dirigirnos a cualquier sección, una lista de diccionarios que contiene los nombres de cada datos de los items rss. Una vez identificados podemos dirigirnos a `lavaguardia.html` para utilizar estas variables y mostrar los datos en la web.
+
 ### `lavanguardia.html`
 
-Para crear una descripcion de cada entrada rss de
-Descripciones para cada entrada
+Para crear una descripción de cada entrada rss una vez obtenidos los nombres de la variables a mostrar en el paso anterior, deberemos agregar el siguiente código en el `body` del html:
+
+```html
+<body>
+    <h1>La Vanguardia - <small>{{rss.feed.title}}</small></h1>
+    <img src="{{rss.feed.image.url}}" alt="logo" /> 
+    <p>
+        <a href="{{rss.feed.link}}">{{rss.feed.link}}</a>
+    </p>
+    {% for item in rss.entries %}
+        <p>
+            <a href="{{item.link}}">{{item.title}}</a>
+            {% for media in item.media_content %}
+                <p><img src="{{media.url}}" alt="{{item.title}}" /></p>
+            {% endfor %}
+        </p>
+        <p>
+            Descripción: {{item.description}}
+        </p>
+        <p>
+            Datos de creación: {{item.published}}
+        </p>
+        <p>
+            Datos de modificación: {{item.updated}}
+        </p>
+        <p>
+            Autor: {{item.author}}
+        </p>
+        <p>
+            Categoría: {{item.category}}
+        </p>
+    {% endfor %}
+</body>
+</html>
+```
