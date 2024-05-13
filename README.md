@@ -138,3 +138,21 @@ flask run --debug
 En este caso nos piden incluir 2 nuevas secciones rss del diario de la vanguardia, para hacerlo creamos 2 archivos `.xml` en la siguiente ruta del proyecto:
 
 `carpeta_raiz/rss/lavanguardia`
+
+<br>
+
+A continuación seleccionamos las secciones a añadir y obtenemos los rss de las mismas desde la página oficial de la vanguardia: [Link rss](https://www.lavanguardia.com/rss)
+
+Si nos dirigimos al enlace, veríamos algo así con todas las secciones:
+
+![image](https://github.com/xddaso/proyecto-flask-rss/assets/104591247/5ab0f2c9-0ce5-4df5-9d33-0fa275029b7a)
+
+Al seleccionar una, nos redirige a una pestaña con su codigo rss que se vería algo así:
+
+![image](https://github.com/xddaso/proyecto-flask-rss/assets/104591247/48afc301-a94f-4eb4-aea3-f00ff6e458a5)
+
+En mi caso añadí las secciones de Tecnología y Comer, una vez obtenido su código rss de la web lo incluimos en los archivos `.xml` creados anteriormente:
+
+![image](https://github.com/xddaso/proyecto-flask-rss/assets/104591247/7c0ec68c-f209-4195-97f0-c97dd84ce738)
+
+
