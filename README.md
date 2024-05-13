@@ -131,4 +131,10 @@ Para iniciar nuestra aplicación Flask dentro del entorno virtual deberemos ejec
 flask run --debug
 ```
 > [!IMPORTANT]
-> Al iniciar la aplicación de forma local, podremos acceder a ella a traves del navegador en el enlace `https:localhost`
+> Al iniciar la aplicación de forma local, podremos acceder a ella a traves del navegador en el enlace `http://127.0.0.1:5000` o `localhost:5000`
+
+## RSS
+
+En este caso nos piden incluir 2 nuevas secciones rss del diario de la vanguardia, para hacerlo creamos 2 archivos `.xml` en la siguiente ruta del proyecto:
+
+`carpeta_raiz/rss/lavanguardia`
