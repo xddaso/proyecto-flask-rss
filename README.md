@@ -186,12 +186,24 @@ def lavanguardia(seccio):
     print (rss.entries[0])
     return render_template("lavanguardia.html", rss = rss)
 ```
+<br>
 
-Mediante esta linea impirmiremos por terminal al dirigirnos a cualquier sección, una lista de diccionarios que contiene los nombres de cada datos de los items rss. Una vez identificados podemos dirigirnos a `lavaguardia.html` para utilizar estas variables y mostrar los datos en la web.
+Mediante esta linea impirmiremos por terminal al dirigirnos a cualquier sección, una lista de diccionarios que contiene los nombres de cada dato de los items rss. El resultado se vería de la siguiente manera:
+
+![image](https://github.com/xddaso/proyecto-flask-rss/assets/104591247/87ce20cc-8cb2-41df-8a6f-c66a25355a63)
+
+> [!WARNING]
+> Esto solo se mostrará cuando estamos ejecutando la web flask (`flask run --debug`) y especificamente cuando seleccionemos alguna de las secciones.
+
+<br>
+
+Una vez identificados podemos dirigirnos a `lavaguardia.html` para utilizar estas variables y mostrar los datos en la web.
+
+
 
 ### `lavanguardia.html`
 
-Para crear una descripción de cada entrada rss una vez obtenidos los nombres de la variables a mostrar en el paso anterior, deberemos agregar el siguiente código en el `body` del html:
+Para crear una descripción de cada entrada rss una vez obtenidos los nombres de la variables a mostrar en el paso anterior, deberemos agregar el siguiente código en el `body` del HTML:
 
 ```html
 <body>
@@ -224,5 +236,4 @@ Para crear una descripción de cada entrada rss una vez obtenidos los nombres de
         </p>
     {% endfor %}
 </body>
-</html>
 ```
