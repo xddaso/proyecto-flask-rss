@@ -131,4 +131,144 @@ Para iniciar nuestra aplicación Flask dentro del entorno virtual deberemos ejec
 flask run --debug
 ```
 > [!IMPORTANT]
-> Al iniciar la aplicación de forma local, podremos acceder a ella a traves del navegador en el enlace `https:localhost`
+> Al iniciar la aplicación de forma local, podremos acceder a ella a traves del navegador en el enlace `http://127.0.0.1:5000` o `localhost:5000`
+
+## RSS
+
+En este caso nos piden incluir 2 nuevas secciones rss del diario de la vanguardia, para hacerlo creamos 2 archivos `.xml` en la siguiente ruta del proyecto:
+
+`carpeta_raiz/rss/lavanguardia`
+
+<br>
+
+A continuación seleccionamos las secciones a añadir y obtenemos los rss de las mismas desde la página oficial de la vanguardia: [Link rss](https://www.lavanguardia.com/rss)
+
+Si nos dirigimos al enlace, veríamos algo así con todas las secciones:
+
+![image](https://github.com/xddaso/proyecto-flask-rss/assets/104591247/5ab0f2c9-0ce5-4df5-9d33-0fa275029b7a)
+
+Al seleccionar una, nos redirige a una pestaña con su codigo rss que se vería algo así:
+
+![image](https://github.com/xddaso/proyecto-flask-rss/assets/104591247/9a3c487d-18c1-4812-913b-2cbaf9a3776e)
+
+En mi caso añadí las secciones de Tecnología y Comer, una vez obtenido su código rss de la web lo incluimos en los archivos `.xml` creados anteriormente:
+
+![image](https://github.com/xddaso/proyecto-flask-rss/assets/104591247/7c0ec68c-f209-4195-97f0-c97dd84ce738)
+
+<br>
+
+## `index.html`
+
+En la página principal debemos agregar los enlaces a las secciones agregadas, partiendo de los agregados en el codigo base, quedaría de la siguiente manera:
+
+![image](https://github.com/xddaso/proyecto-flask-rss/assets/104591247/af848f02-46fa-44da-8e0c-94695e4eb045)
+
+<br>
+
+## Detalle de las entradas
+
+Para cada item de las entradas se nos pide (descripció, dates de creació i de modificació, autor i categoria), para hacerlo debemos aplicar algunos cambios tanto en `app.py` como en `lavanguardia.html`:
+
+### `app.py`
+
+En este caso, debemos agregar una simple línea para mostrar los detalles que nos piden de cada seccion rss, ya que en si, las que se muestran en el archivo no son los nombres reales de cada valor de los items.
+
+En la ruta de las secciones debemos agregar:
+
+`print (rss.entries[0])`
+
+Lo que quedaría de la siguiente manera en conjunto con el codigo previo:
+
+```python
+@app.route('/lavanguardia/<seccio>')
+def lavanguardia(seccio):
+    rss = get_rss_lavanguardia(seccio)
+    print (rss.entries[0])
+    return render_template("lavanguardia.html", rss = rss)
+```
+<br>
+
+Mediante esta linea impirmiremos por terminal al dirigirnos a cualquier sección, una lista de diccionarios que contiene los nombres de cada dato de los items rss. El resultado se vería de la siguiente manera:
+
+![image](https://github.com/xddaso/proyecto-flask-rss/assets/104591247/87ce20cc-8cb2-41df-8a6f-c66a25355a63)
+
+> [!WARNING]
+> Esto solo se mostrará cuando estamos ejecutando la web flask (`flask run --debug`) y especificamente cuando seleccionemos alguna de las secciones.
+
+<br>
+
+Una vez identificados podemos dirigirnos a `lavaguardia.html` para utilizar estas variables y mostrar los datos en la web.
+
+
+
+### `lavanguardia.html`
+
+Para crear una descripción de cada entrada rss una vez obtenidos los nombres de la variables a mostrar en el paso anterior, deberemos agregar el siguiente código en el `body` del HTML:
+
+```html
+<body>
+    <h1>La Vanguardia - <small>{{rss.feed.title}}</small></h1>
+    <img src="{{rss.feed.image.url}}" alt="logo" /> 
+    <p>
+        <a href="{{rss.feed.link}}">{{rss.feed.link}}</a>
+    </p>
+    {% for item in rss.entries %}
+        <p>
+            <a href="{{item.link}}">{{item.title}}</a>
+            {% for media in item.media_content %}
+                <p><img src="{{media.url}}" alt="{{item.title}}" /></p>
+            {% endfor %}
+        </p>
+        <p>
+            Descripción: {{item.description}}
+        </p>
+        <p>
+            Datos de creación: {{item.published}}
+        </p>
+        <p>
+            Datos de modificación: {{item.updated}}
+        </p>
+        <p>
+            Autor: {{item.author}}
+        </p>
+        <p>
+            Categoría: {{item.category}}
+        </p>
+    {% endfor %}
+</body>
+```
+En este caso estamos creando un bucle para cada item que devuleve cada valor solicitado, y fuera del bucle obtenemos tmb los valores del titulo, el logo y el link de la noticia y de la secccion.
+
+### Modo remoto
+
+Mediante el modo remoto accedemos a los enlaces de la vanguardia por link y no por acceso local. Un ejemplo:
+
+En `app.py`:
+
+```python
+def get_rss_lavanguardia(seccio):
+    # MODE REMOT: versió on descarrega l'XML de la web
+    xml = f"https://www.lavanguardia.com/rss/{seccio}.xml"
+    
+    # MODE LOCAL: versió que fa servir l'XML descarregat
+    #xml = f"./rss/lavanguardia/{seccio}.xml"
+    
+    rss = feedparser.parse(xml)
+    return rss
+```
+En `index.html` debemos escribir los enlaces de la siguiente manera:
+
+```html
+<li><a href="https://www.lavanguardia.com/rss/comer.xml">Comer</a></li>
+```
+
+Resultado:
+
+![image](https://github.com/xddaso/proyecto-flask-rss/assets/104591247/944fe526-6661-46ea-b36c-1890dc934c25)
+
+### Modo local
+
+En ``
+
+> [!IMPORTANT]
+> Para usar el modo remoto debemos comentar el modo local y viceversa
