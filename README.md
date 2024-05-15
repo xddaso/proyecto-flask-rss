@@ -268,7 +268,32 @@ Resultado:
 
 ### Modo local
 
-En ``
+En el modo local trabajamos con los rss que tenemos en el local y accedemos a ellos por ruta. Un ejemplo:
+
+En `app.py`:
+
+```python
+def get_rss_lavanguardia(seccio):
+    # MODE REMOT: versió on descarrega l'XML de la web
+    # xml = f"https://www.lavanguardia.com/rss/{seccio}.xml"
+    
+    # MODE LOCAL: versió que fa servir l'XML descarregat
+    xml = f"./rss/lavanguardia/{seccio}.xml"
+    
+    rss = feedparser.parse(xml)
+    return rss
+```
+
+En `index.html` debemos escribir los enlaces de la siguiente manera:
+
+```html
+<li><a href="/lavanguardia/comer">Comer</a></li>
+```
+
+Resultado:
+
+![image](https://github.com/xddaso/proyecto-flask-rss/assets/104591247/d129c2b3-58d2-46f8-880d-5ce55cec1656)
+
 
 > [!IMPORTANT]
 > Para usar el modo remoto debemos comentar el modo local y viceversa
