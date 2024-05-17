@@ -241,7 +241,7 @@ En este caso estamos creando un bucle para cada item que devuleve cada valor sol
 
 ### Modo remoto
 
-Mediante el modo remoto accedemos a los enlaces de la vanguardia por link y no por acceso local. Un ejemplo:
+Mediante el modo remoto accedemos a los rss de la vanguardia por link y no por acceso local. Un ejemplo:
 
 En `app.py`:
 
@@ -256,15 +256,10 @@ def get_rss_lavanguardia(seccio):
     rss = feedparser.parse(xml)
     return rss
 ```
-En `index.html` debemos escribir los enlaces de la siguiente manera:
-
-```html
-<li><a href="https://www.lavanguardia.com/rss/comer.xml">Comer</a></li>
-```
 
 Resultado:
 
-![image](https://github.com/xddaso/proyecto-flask-rss/assets/104591247/944fe526-6661-46ea-b36c-1890dc934c25)
+![image](https://github.com/xddaso/proyecto-flask-rss/assets/104591247/98fcdd67-081a-487a-9ad8-e2be28ac0193)
 
 ### Modo local
 
@@ -284,7 +279,7 @@ def get_rss_lavanguardia(seccio):
     return rss
 ```
 
-En `index.html` debemos escribir los enlaces de la siguiente manera:
+En ambos casos escribimos en el `index.html` los enlaces de la siguiente manera:
 
 ```html
 <li><a href="/lavanguardia/comer">Comer</a></li>
