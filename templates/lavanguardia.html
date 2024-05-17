@@ -4,36 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>La Vanguardia - {{rss.feed.title}}</title>
-    <link rel="stylesheet" href="/static/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="../static/css/style.css">
 </head>
 <body>
-    <h1>La Vanguardia - <small>{{rss.feed.title}}</small></h1>
-    <img src="{{rss.feed.image.url}}" alt="logo" /> 
-    <p>
-        <a href="{{rss.feed.link}}">{{rss.feed.link}}</a>
-    </p>
-    {% for item in rss.entries %}
-        <p>
-            <a href="{{item.link}}">{{item.title}}</a>
-            {% for media in item.media_content %}
-                <p><img src="{{media.url}}" alt="{{item.title}}" /></p>
-            {% endfor %}
-        </p>
-        <p>
-            Descripción: {{item.description}}
-        </p>
-        <p>
-            Datos de creación: {{item.published}}
-        </p>
-        <p>
-            Datos de modificación: {{item.updated}}
-        </p>
-        <p>
-            Autor: {{item.author}}
-        </p>
-        <p>
-            Categoría: {{item.category}}
-        </p>
-    {% endfor %}
+    <header class="bg-dark text-light">
+        <div  class="container-fluid text-center pt-3 pb-3 ">
+            <a href="{{rss.feed.link}}" >
+                <img src="{{rss.feed.image.url}}" alt="logo" class="logo" />
+            </a>
+        </div>
+    </header>
+    <section>
+        <div class="container text-center">
+            <h2 class="pt-2 pb-2 text-muted">- {{rss.feed.title}} -</h2>
+        </div>
+        </img>
+        {% for item in rss.entries %}
+            <p>
+                <a href="{{item.link}}">{{item.title}}</a>
+                {% for media in item.media_content %}
+                    <p><img src="{{media.url}}" alt="{{item.title}}" /></p>
+                {% endfor %}
+            </p>
+            <p>
+                Descripción: {{item.description}}
+            </p>
+            <p>
+                Datos de creación: {{item.published}}
+            </p>
+            <p>
+                Datos de modificación: {{item.updated}}
+            </p>
+            <p>
+                Autor: {{item.author}}
+            </p>
+            <p>
+                Categoría: {{item.category}}
+            </p>
+        {% endfor %}
+    </section>
 </body>
 </html>

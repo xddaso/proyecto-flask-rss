@@ -1,8 +1,17 @@
 body {
-    background-color: beige;
+    margin: 0;
 }
 
 img {
     width: 400px;
     height: auto;
 }
+
+.logo {
+    width: 250px;
+}
+
+/* .centrar {
+    display: flex;
+    justify-content: center;
+} */
