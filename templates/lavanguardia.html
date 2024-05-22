@@ -15,34 +15,38 @@
             </a>
         </div>
     </header>
-    <section>
-        <div class="container text-center">
-            <h2 class="pt-2 pb-2 text-muted">- {{rss.feed.title}} -</h2>
-        </div>
-        </img>
+    <div class="container text-center">
+        <h2 class="pt-2 pb-2 text-muted">- {{rss.feed.title}} -</h2>
+    </div>
+    <section class="container text-center">
+        
+        <div class="row">
         {% for item in rss.entries %}
-            <p>
+            <div class="col">
+                <p>
+                    {% for media in item.media_content %}
+                        <p><img src="{{media.url}}" alt="{{item.title}}" /></p>
+                    {% endfor %}
+                </p>
                 <a href="{{item.link}}">{{item.title}}</a>
-                {% for media in item.media_content %}
-                    <p><img src="{{media.url}}" alt="{{item.title}}" /></p>
-                {% endfor %}
-            </p>
-            <p>
-                Descripción: {{item.description}}
-            </p>
-            <p>
-                Datos de creación: {{item.published}}
-            </p>
-            <p>
-                Datos de modificación: {{item.updated}}
-            </p>
-            <p>
-                Autor: {{item.author}}
-            </p>
-            <p>
-                Categoría: {{item.category}}
-            </p>
+                <p>
+                    Descripción: {{item.description}}
+                </p>
+                <p>
+                    Datos de creación: {{item.published}}
+                </p>
+                <p>
+                    Datos de modificación: {{item.updated}}
+                </p>
+                <p>
+                    Autor: {{item.author}}
+                </p>
+                <p>
+                    Categoría: {{item.category}}
+                </p>
+            </div>
         {% endfor %}
+        </div>
     </section>
 </body>
 </html>
