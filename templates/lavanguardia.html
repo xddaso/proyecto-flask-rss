@@ -9,20 +9,29 @@
 </head>
 <body>
     <header class="bg-dark text-light">
-        <div  class="container-fluid text-center pt-3 pb-3 ">
-            <a href="{{rss.feed.link}}" >
-                <img src="{{rss.feed.image.url}}" alt="logo" class="logo" />
-            </a>
-        </div>
+        <nav class="container-fluid pt-3 pb-3 d-flex align-items-center">
+            <div class="container-fluid">
+                <a href="{{rss.feed.link}}" >
+                    <img src="{{rss.feed.image.url}}" alt="logo" class="logo" />
+                </a>
+            </div>
+            <div class="text-end d-flex gap-3">
+                <a href="#" class="text-end">Inicio</a>
+                <a href="#" class="text-end">Inicio</a>
+                <a href="#" class="text-end">Inicio</a>
+            </div>
+        </nav>
+        
+
     </header>
     <div class="container text-center">
-        <h2 class="pt-2 pb-2 text-muted">- {{rss.feed.title}} -</h2>
+        <h2 class="pt-2 pb-2">- {{rss.feed.title}} -</h2>
     </div>
     <section class="container text-center">
         
         <div class="row">
         {% for item in rss.entries %}
-            <div class="col">
+            <div class="col border-end border-start border-succes mb-5 color">
                 <p>
                     {% for media in item.media_content %}
                         <p><img src="{{media.url}}" alt="{{item.title}}" /></p>

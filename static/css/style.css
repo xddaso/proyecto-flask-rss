@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    background-color: aliceblue;
 }
 
 img {
@@ -10,8 +11,3 @@ img {
 .logo {
     width: 250px;
 }
-
-/* .centrar {
-    display: flex;
-    justify-content: center;
-} */
