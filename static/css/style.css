@@ -11,3 +11,14 @@ img {
 .logo {
     width: 250px;
 }
+
+.contenedor {
+    background-image: url(../img/diaris.jpg);
+    height: 60vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
