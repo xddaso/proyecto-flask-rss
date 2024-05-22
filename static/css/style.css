@@ -13,12 +13,39 @@ img {
 }
 
 .contenedor {
-    background-image: url(../img/diaris.jpg);
-    height: 60vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/diaris.jpg);
+    height: 50vh;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.altura-ancho {
+    height: 230px;
+    width: 400px;
+}
+
+.enlaces {
+    text-decoration: none;
+    margin-top: 4px;
+    color: white;
+    font-family: monospace;
+    background-color: black;
+    width: fit-content;
+    padding: 8px;
+    border: 1px solid grey;
+}
+
+.enlaces1 {
+    text-decoration: none;
+    color: white;
+    font-family: monospace;
+}
+
+.parrafos {
+    padding-top: 16px;
+    display: flex;
 }

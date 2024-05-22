@@ -16,19 +16,60 @@
                 </a>
             </div>
             <div class="text-end d-flex gap-3">
-                <a href="/">Inicio</a>
-                <a href="/lavanguardia/deportes">Deportes</a>
-                <a href="/lavanguardia/politica">Política</a>
-                <a href="/lavanguardia/vida">Vida</a>
-                <a href="/lavanguardia/tecnologia">Tecnología</a>
-                <a href="/lavanguardia/comer">Comer</a>
+                <a href="/" class="enlaces1">Inicio</a>
+                <a href="/lavanguardia/deportes" class="enlaces1">Deportes</a>
+                <a href="/lavanguardia/politica" class="enlaces1">Política</a>
+                <a href="/lavanguardia/vida" class="enlaces1">Vida</a>
+                <a href="/lavanguardia/tecnologia" class="enlaces1">Tecnología</a>
+                <a href="/lavanguardia/comer" class="enlaces1">Comer</a>
             </div>
         </nav>
         
 
     </header>
     <div class="container text-center">
+        
         <h2 class="pt-2 pb-2">- {{rss.feed.title}} -</h2>
+        {% if rss.feed.title == "Deportes" %}
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-barbell" width="40" height="40" viewBox="0 0 24 24" stroke-width="1" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M2 12h1" />
+            <path d="M6 8h-2a1 1 0 0 0 -1 1v6a1 1 0 0 0 1 1h2" />
+            <path d="M6 7v10a1 1 0 0 0 1 1h1a1 1 0 0 0 1 -1v-10a1 1 0 0 0 -1 -1h-1a1 1 0 0 0 -1 1z" />
+            <path d="M9 12h6" />
+            <path d="M15 7v10a1 1 0 0 0 1 1h1a1 1 0 0 0 1 -1v-10a1 1 0 0 0 -1 -1h-1a1 1 0 0 0 -1 1z" />
+            <path d="M18 8h2a1 1 0 0 1 1 1v6a1 1 0 0 1 -1 1h-2" />
+            <path d="M22 12h-1" />
+          </svg>
+
+        {% elif rss.feed.title == "Comer" %}
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chef-hat" width="40" height="40" viewBox="0 0 24 24" stroke-width="1" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+        <path d="M12 3c1.918 0 3.52 1.35 3.91 3.151a4 4 0 0 1 2.09 7.723l0 7.126h-12v-7.126a4 4 0 1 1 2.092 -7.723a4 4 0 0 1 3.908 -3.151z" />
+        <path d="M6.161 17.009l11.839 -.009" />
+        </svg>
+
+        {% elif rss.feed.title == "Política" %}
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-speakerphone" width="40" height="40" viewBox="0 0 24 24" stroke-width="1" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M18 8a3 3 0 0 1 0 6" />
+            <path d="M10 8v11a1 1 0 0 1 -1 1h-1a1 1 0 0 1 -1 -1v-5" />
+            <path d="M12 8h0l4.524 -3.77a.9 .9 0 0 1 1.476 .692v12.156a.9 .9 0 0 1 -1.476 .692l-4.524 -3.77h-8a1 1 0 0 1 -1 -1v-4a1 1 0 0 1 1 -1h8" />
+        </svg>
+        {% elif rss.feed.title == "Sociedad" %}
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-seeding" width="40" height="40" viewBox="0 0 24 24" stroke-width="1" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M12 10a6 6 0 0 0 -6 -6h-3v2a6 6 0 0 0 6 6h3" />
+            <path d="M12 14a6 6 0 0 1 6 -6h3v1a6 6 0 0 1 -6 6h-3" />
+            <path d="M12 20l0 -10" />
+        </svg>
+        {% elif rss.feed.title == "Tecnología" %}
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="40" height="40" viewBox="0 0 24 24" stroke-width="1" stroke="#2c3e50" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" />
+        </svg>
+        {% endif %}
+        
     </div>
     <section class="container text-center">
         
