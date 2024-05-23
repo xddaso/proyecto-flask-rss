@@ -352,6 +352,43 @@ En mi código partía de un section y las columnas las creé a partir del bucle 
         </div>
     </section>
 ```
+<br>
 
-> [!NOTE] También utilizé las clases de `border` para crear los bordes en las noticas y añadí algunos margens
+> [!NOTE]
+> También utilizé las clases de `border` para crear los bordes en las noticas y añadí algunos margens. Código de la documentación oficial [Link](https://getbootstrap.com/docs/5.3/layout/grid/)
+
+
+### Carousel
+
+Para el carousel es importante destacar lo siguiente:
+
+```html
+<div id="carousel" class="carousel slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          <button type="button" data-bs-target="#carousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+          <button type="button" data-bs-target="#carousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="../static/img/carrousel1.jpeg" class="d-block w-100" alt="diario2">
+            <div class="carousel-caption d-none d-md-block">
+              <h2>Política</h2>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="../static/img/carousel.jpeg" class="d-block w-100" alt="diario1">
+            <div class="carousel-caption d-none d-md-block">
+              <h2>Deporte</h2>
+            </div>
+          </div>
+```
+
+> [!CAUTION]
+> Para añadir imágenes extra debemos agregar un boton y modifcar `data-bs-slide-to="x"` y `aria-label="Slide x"` con su número correspondiente al igual que el `alt` de las imagenes
+
+> [!NOTE]
+> Para seleccionar la primera imagen que aparecerá en el carousel debemos añadir la clase `active` en el carousel-item que deseemos que aparezca primero
 
