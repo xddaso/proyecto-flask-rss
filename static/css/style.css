@@ -49,3 +49,7 @@ img {
     padding-top: 16px;
     display: flex;
 }
+
+.slider {
+    height: 100vh;
+}
