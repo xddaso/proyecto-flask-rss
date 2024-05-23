@@ -11,17 +11,17 @@
     <header class="bg-dark text-light">
         <nav class="container-fluid pt-3 pb-3 d-flex align-items-center">
             <div class="container-fluid">
-                <a href="{{rss.feed.link}}" >
-                    <img src="{{rss.feed.image.url}}" alt="logo" class="logo" />
+                <a href="https://www.elpuntavui.cat/barcelona.html" >
+                    <img src="../static/img/logopuntavui.png" alt="logo" class="logo" />
                 </a>
             </div>
             <div class="text-end d-flex gap-3">
                 <a href="/" class="enlaces1">Inicio</a>
-                <a href="/lavanguardia/deportes" class="enlaces1">Deportes</a>
-                <a href="/lavanguardia/politica" class="enlaces1">Política</a>
-                <a href="/lavanguardia/vida" class="enlaces1">Vida</a>
-                <a href="/lavanguardia/tecnologia" class="enlaces1">Tecnología</a>
-                <a href="/lavanguardia/comer" class="enlaces1">Comer</a>
+                <a href="/puntavui/deportes" class="enlaces1">Deportes</a>
+                <a href="/puntavui/comunicacion" class="enlaces1">Comunicación</a>
+                <a href="/puntavui/politica" class="enlaces1">Política</a>
+                <a href="/puntavui/territorio" class="enlaces1">Territorio</a>
+                <a href="/puntavui/sociedad" class="enlaces1">Sociedad</a>
             </div>
         </nav>
         
@@ -76,14 +76,11 @@
         {% for item in rss.entries %}
             <div class="col border-end border-start border-succes mb-5 color">
                 <p>
-                    {% for media in item.media_content %}
-                        <p><img src="{{media.url}}" alt="{{item.title}}" /></p>
+                    {% for media in item.links %}
+                        <img src="{{media.href}}"></img>
                     {% endfor %}
                 </p>
                 <a href="{{item.link}}">{{item.title}}</a>
-                <p>
-                    Descripción: {{item.description}}
-                </p>
                 <p>
                     Datos de creación: {{item.published}}
                 </p>
