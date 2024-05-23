@@ -14,7 +14,7 @@ img {
 
 .contenedor {
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/diaris.jpg);
-    height: 50vh;
+    height: 70vh;
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -50,6 +50,22 @@ img {
     display: flex;
 }
 
-.slider {
-    height: 100vh;
+.carousel-item {
+    height: 400px;
+    width: 1000px;
+    max-width: 100%;
+}
+
+.carousel-item img {
+    height: 400px;
+    width: 1000px;
+    max-width: 100%;
+}
+
+.slide {
+    height: 400px;
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: 3rem;
+    max-width: 100%;
 }
