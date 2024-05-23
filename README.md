@@ -357,6 +357,7 @@ En mi código partía de un section y las columnas las creé a partir del bucle 
 > [!NOTE]
 > También utilizé las clases de `border` para crear los bordes en las noticas y añadí algunos margens. Código de la documentación oficial [Link](https://getbootstrap.com/docs/5.3/layout/grid/)
 
+<br>
 
 ### Carousel
 
@@ -386,9 +387,13 @@ Para el carousel es importante destacar lo siguiente:
           </div>
 ```
 
+<br>
+
 > [!CAUTION]
-> Para añadir imágenes extra debemos agregar un boton y modifcar `data-bs-slide-to="x"` y `aria-label="Slide x"` con su número correspondiente al igual que el `alt` de las imagenes
+> Para añadir imágenes extra debemos agregar un boton y modifcar `data-bs-slide-to="x"` y `aria-label="Slide x"` con su número correspondiente al igual que el `alt` de las imagenes y los id de `data-bs-target` deben ser iguales
+
 
 > [!NOTE]
 > Para seleccionar la primera imagen que aparecerá en el carousel debemos añadir la clase `active` en el carousel-item que deseemos que aparezca primero
+
 
