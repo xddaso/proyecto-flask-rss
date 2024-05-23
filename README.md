@@ -289,6 +289,69 @@ Resultado:
 
 ![image](https://github.com/xddaso/proyecto-flask-rss/assets/104591247/d129c2b3-58d2-46f8-880d-5ce55cec1656)
 
-
 > [!IMPORTANT]
 > Para usar el modo remoto debemos comentar el modo local y viceversa
+
+
+## Bootstrap
+
+En este apartado explicaré lo principal utilizado en el proyecto a partir de Bootstrap en la version 5.3:
+
+### Layout Noticias
+
+Para las noticias utilizé el layout con un sistema grid, resulta bastante sencillo de aplicar y es responsive:
+
+codigo base:
+
+```html
+<div class="container text-center">
+  <div class="row">
+    <div class="col">
+      Column
+    </div>
+    <div class="col">
+      Column
+    </div>
+    <div class="col">
+      Column
+    </div>
+  </div>
+</div>
+```
+
+En mi código partía de un section y las columnas las creé a partir del bucle realizado en jinja2 para obtener la descripcion y otros datos de la noticia:
+
+```html
+<section class="container text-center">
+        <div class="row">
+        {% for item in rss.entries %}
+            <div class="col border-end border-start border-succes mb-5 color">
+                <p>
+                    {% for media in item.media_content %}
+                        <p><img src="{{media.url}}" alt="{{item.title}}" /></p>
+                    {% endfor %}
+                </p>
+                <a href="{{item.link}}">{{item.title}}</a>
+                <p>
+                    Descripción: {{item.description}}
+                </p>
+                <p>
+                    Datos de creación: {{item.published}}
+                </p>
+                <p>
+                    Datos de modificación: {{item.updated}}
+                </p>
+                <p>
+                    Autor: {{item.author}}
+                </p>
+                <p>
+                    Categoría: {{item.category}}
+                </p>
+            </div>
+        {% endfor %}
+        </div>
+    </section>
+```
+
+> [!NOTE] También utilizé las clases de `border` para crear los bordes en las noticas y añadí algunos margens
+
